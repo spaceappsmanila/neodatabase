@@ -1,0 +1,58 @@
+extends layout
+block content
+  div(class='row')
+    div(class='small-12 small-centered columns')
+      fieldset
+        legend Record Observation
+        form(action='/observations'
+          method='post')
+          div(class='row')
+            div(class='small-2 columns')
+              label Observation Number
+            div(class='small-2 columns')
+              label Temporary Designation
+            div(class='small-1 columns')
+              label N1
+            div(class='small-1 columns')
+              label N2
+            div(class='small-2 columns')
+              label Observation Date
+            div(class='small-1 columns')
+              label RA
+            div(class='small-1 columns')
+              label Decl
+            div(class='small-1 columns')
+              label (H)Band
+            div(class='small-1 columns')
+              label ObsCode
+          div(class='row')
+            div(class='small-2 columns')
+              input(type='number'
+                name='obs'
+                maxlength=5)
+            div(class='small-2 columns')
+              input(type='text' 
+                required 
+                maxlength=6)
+            div(class='small-1 columns')
+              select
+            div(class='small-1 columns')
+              select
+            div(class='small-2 columns')
+              input(type='text' 
+                required
+                max-length=17)
+            div(class='small-1 columns')
+              input(type='text' 
+                required 
+                maxlength=12)
+            div(class='small-1 columns')
+              input(type='text' 
+                required 
+                maxlength=12)
+            div(class='small-1 columns')
+              input(type='text' 
+                required 
+                maxlength=9)
+            div(class='small-1 columns')
+              select

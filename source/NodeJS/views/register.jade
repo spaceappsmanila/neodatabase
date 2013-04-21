@@ -1,0 +1,41 @@
+extends layout
+append head
+ script(src='//ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js')
+ script(src='/javascripts/register.js')
+block content
+  div(class='row')
+    div(class='small-10 small-centered columns')
+      fieldset
+        legend Registration Form
+        form(method='post', action='/register')
+          label(for='emailAddress') E-Mail Address:
+          input(type='email'
+            name='email'
+            id='emailAddress'
+            required)
+          label(for='astroName') Name:
+          input(type='text'
+            name='name'
+            id='astroName'
+            required)
+          label(for='password') Password:
+          input(type='password'
+            name='password'
+            id='password'
+            required)
+          label(for='password2') Repeat Password:
+          input(type='password'
+            id='password2'
+            required)
+          ul(class='button-group right radius')
+            li
+              input(type='submit'
+              id='submitForm'
+              class='button'
+              onclick='return checkPassword()'
+              value='Submit Registration') 
+            li
+              input(type='reset'
+              id='clearForm'
+              class='button'
+              value='Clear Fields')

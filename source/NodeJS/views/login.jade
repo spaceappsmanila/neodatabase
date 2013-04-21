@@ -1,0 +1,29 @@
+extends layout
+block content
+  div(class='row')
+    div(class='small-10 small-centered columns')
+      fieldset
+        legend Login Page
+        form(action='/login'
+          method='post')
+          label(for='email') Email-Address:
+          input(type='email'
+                required
+                id='email'
+                name='email')
+          label(for='password') Password:
+          input(type='password'
+                required
+                id='password'
+                name='password')
+          ul(class='button-group right radius')
+            li
+              input(type='submit'
+              name='loginSubmit'
+              class='button'
+              value='Submit Registration') 
+            li
+              input(type='reset'
+              id='clearForm'
+              class='button'
+              value='Clear Fields')
